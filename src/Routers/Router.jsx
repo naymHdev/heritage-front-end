@@ -6,6 +6,9 @@ import BuyerScreens from "../Pages/BuyerScreens/BuyerScreens";
 import About from "../Pages/About/About";
 import SearchResult from "../Pages/SearchResult/SearchResult";
 import PropertyDetails from "../Pages/PrppertyDetails/PropertyDetails";
+import ManageRentals from "../Components/ManageRentals/ManageRentals";
+import SignIn from "../Auth/SignIn/SignIn";
+import SignUp from "../Auth/SignUp/SignUp";
 
 const Router = createBrowserRouter([
   {
@@ -33,7 +36,19 @@ const Router = createBrowserRouter([
         path: "/propertyDetails/:id",
         element: <PropertyDetails />,
       },
+      {
+        path: "/manageRentals",
+        element: <ManageRentals />,
+      },
     ],
+  },
+  {
+    path: "/signIn",
+    element: <SignIn />,
+  },
+  {
+    path: "/signUp",
+    element: <SignUp />,
   },
 ]);
 
