@@ -10,7 +10,7 @@ const SocialLogIn = () => {
           Sign up with Google
         </button>
         <button className=" flex items-center gap-2 w-full mx-auto justify-center py-2 bg-gray-100">
-          <FaFacebook size={25} />
+          <FaFacebook className=" text-blue-600" size={25} />
           Sign up with Facebook
         </button>
       </div>
