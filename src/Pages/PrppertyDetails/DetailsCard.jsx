@@ -207,7 +207,14 @@ const DetailsCard = ({ detail }) => {
           {/* Google Map */}
           <div>
             <section className=" mt-12">
-              <div style={{ height: "70vh", width: "100%" }}>
+              <div
+                style={{
+                  height: "70vh",
+                  width: "100%",
+                  borderRadius: "8px",
+                  overflow: "hidden",
+                }}
+              >
                 <GoogleMapReact
                   bootstrapURLKeys={{ key: "" }}
                   defaultCenter={defaultProps.center}
