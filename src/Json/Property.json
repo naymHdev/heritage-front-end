@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "property_name": "Cozy Apartment",
+    "property_type": "Apartment",
+    "location": "123 Main Street, Cityville",
+    "price": 1500,
+    "details_overview": "A cozy apartment located in the heart of the city. Close to amenities and public transportation.",
+    "images": [
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+    ],
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "fully_furnished": false,
+      "carpet_area": 800,
+      "floor": 2,
+      "transaction_type": "Rent",
+      "facing": "East",
+      "additional_rooms": ["Living Room", "Kitchen", "Balcony"],
+      "age_of_construction": 5,
+      "amenities": ["Parking", "Security", "Gym", "Swimming Pool"]
+    }
+  },
+  {
+    "id": 2,
+    "property_name": "Spacious House",
+    "property_type": "House",
+    "location": "456 Elm Street, Townsville",
+    "price": 2500,
+    "details_overview": "A spacious house with a large backyard, perfect for families.",
+    "images": [
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" },
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" }
+    ],
+    "details": {
+      "bedrooms": 4,
+      "bathrooms": 2.5,
+      "fully_furnished": true,
+      "carpet_area": 2000,
+      "floor": 1,
+      "transaction_type": "Sale",
+      "facing": "North",
+      "additional_rooms": ["Study Room", "Backyard"],
+      "age_of_construction": 10,
+      "amenities": ["Garden", "Garage", "Fireplace"]
+    }
+  },
+  {
+    "id": 3,
+    "property_name": "Modern Loft",
+    "property_type": "Loft",
+    "location": "789 Oak Street, Villagetown",
+    "price": 1800,
+    "details_overview": "A modern loft with high ceilings and an open floor plan.",
+    "images": [
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" },
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" }
+    ],
+    "details": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "fully_furnished": true,
+      "carpet_area": 1000,
+      "floor": 3,
+      "transaction_type": "Rent",
+      "facing": "West",
+      "additional_rooms": ["Office Space"],
+      "age_of_construction": 2,
+      "amenities": ["Elevator", "Roof Deck"]
+    }
+  },
+  {
+    "id": 4,
+    "property_name": "Luxury Condo",
+    "property_type": "Condo",
+    "location": "101 Pine Street, Hamletville",
+    "price": 3000,
+    "details_overview": "A luxurious condo with state-of-the-art amenities.",
+    "images": [
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" },
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" }
+    ],
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "fully_furnished": true,
+      "carpet_area": 1500,
+      "floor": 10,
+      "transaction_type": "Rent",
+      "facing": "South",
+      "additional_rooms": ["Utility Room"],
+      "age_of_construction": 1,
+      "amenities": ["Concierge", "Spa", "Tennis Court"]
+    }
+  },
+  {
+    "id": 5,
+    "property_name": "Charming Cottage",
+    "property_type": "Cottage",
+    "location": "321 Cedar Street, Countryside",
+    "price": 1200,
+    "details_overview": "A charming cottage nestled in the countryside, perfect for a weekend getaway.",
+    "images": [
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+    ],
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "fully_furnished": false,
+      "carpet_area": 1200,
+      "floor": 1,
+      "transaction_type": "Sale",
+      "facing": "Southwest",
+      "additional_rooms": ["Porch"],
+      "age_of_construction": 15,
+      "amenities": ["Garden", "Fire Pit"]
+    }
+  },
+  {
+    "id": 6,
+    "property_name": "Rustic Cabin",
+    "property_type": "Cabin",
+    "location": "555 Maple Street, Forest",
+    "price": 1000,
+    "details_overview": "A rustic cabin surrounded by nature, ideal for those seeking solitude.",
+    "images": [
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+    ],
+    "details": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "fully_furnished": false,
+      "carpet_area": 600,
+      "floor": 1,
+      "transaction_type": "Rent",
+      "facing": "Northwest",
+      "additional_rooms": ["Fireplace"],
+      "age_of_construction": 20,
+      "amenities": ["Nature Trails", "Fishing Pond"]
+    }
+  },
+  {
+    "id": 7,
+    "property_name": "Beachfront Villa",
+    "property_type": "Villa",
+    "location": "777 Beach Road, Seaside",
+    "price": 5000,
+    "details_overview": "A luxurious beachfront villa with breathtaking ocean views.",
+    "images": [
+      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
+      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
+      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+    ],
+    "details": {
+      "bedrooms": 5,
+      "bathrooms": 3.5,
+      "fully_furnished": true,
+      "carpet_area": 3500,
+      "floor": 2,
+      "transaction_type": "Sale",
+      "facing": "Southeast",
+      "additional_rooms": ["Home Theater", "Gym"],
+      "age_of_construction": 5,
+      "amenities": ["Private Beach Access", "Infinity Pool"]
+    }
+  }
+]
