@@ -77,27 +77,27 @@ const DetailsCard = ({ detail }) => {
                 <LiaBedSolid className=" text-xl" />
                 <p className=" flex items-center gap-1">
                   {details?.bedrooms}
-                  <span className=" text-gray-400 font-thin">Beds</span>
+                  <span className=" text-gray-800 font-thin">Beds</span>
                 </p>
               </div>
               <div className=" flex items-center justify-center gap-2">
                 <MdBathtub className=" text-xl" />
                 <p className=" flex items-center gap-1">
                   {details?.bathrooms}
-                  <span className=" text-gray-400 font-thin">Bath</span>
+                  <span className=" text-gray-800 font-thin">Bath</span>
                 </p>
               </div>
               <div className=" flex items-center justify-center gap-2">
                 <MdBalcony className=" text-xl" />
                 <p className=" flex items-center gap-1">
                   {details?.bedrooms}
-                  <span className=" text-gray-400 font-thin">Balcony</span>
+                  <span className=" text-gray-800 font-thin">Balcony</span>
                 </p>
               </div>
               <div className=" flex items-center justify-center gap-2">
                 <GiFinishLine className=" text-xl" />
                 <p className=" flex items-center gap-1">
-                  <span className=" text-gray-400 font-thin">
+                  <span className=" text-gray-800 font-thin">
                     Fully Furnished
                   </span>
                 </p>
