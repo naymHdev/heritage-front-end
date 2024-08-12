@@ -1,5 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react/prop-types */
 import { createContext, useContext, useMemo, useState } from "react";
 import useAllProperty from "../Hooks/useAllProperty";
 
@@ -10,27 +8,61 @@ export const useFilterProperty = () => useContext(PropertyFilter);
 const PropertyContext = ({ children }) => {
   const [allProperty] = useAllProperty();
   const [searchQuery, setSearchQuery] = useState("");
+  const [locationFilter, setLocationFilter] = useState("");
+  const [propertyTypeFilter, setPropertyTypeFilter] = useState("");
+  const [budgetFilter, setBudgetFilter] = useState("");
 
-  // Search filter
   const handleSearch = (e) => {
     setSearchQuery(e.target.value.toLowerCase());
   };
 
-  // Memoize filtered data based on searchQuery
+  const handleLocationChange = (e) => {
+    setLocationFilter(e.target.value);
+  };
+
+  const handlePropertyTypeChange = (e) => {
+    setPropertyTypeFilter(e.target.value);
+  };
+
+  const handleBudgetChange = (e) => {
+    setBudgetFilter(e.target.value);
+  };
+
   const filteredProperty = useMemo(() => {
     if (!allProperty || allProperty.length === 0) return [];
 
-    if (!searchQuery) {
-      return allProperty;
-    }
-
     return allProperty.filter((property) => {
-      if (property && property.property_name) {
-        return property.property_name.toLowerCase().includes(searchQuery);
-      }
-      return false;
+      const matchesSearchQuery = searchQuery
+        ? property.property_name.toLowerCase().includes(searchQuery)
+        : true;
+
+      const matchesLocation = locationFilter
+        ? property.location.toLowerCase() === locationFilter.toLowerCase()
+        : true;
+
+      const matchesPropertyType = propertyTypeFilter
+        ? property.property_type.toLowerCase() ===
+          propertyTypeFilter.toLowerCase()
+        : true;
+
+      const matchesBudget = budgetFilter
+        ? property.price <= parseFloat(budgetFilter)
+        : true;
+
+      return (
+        matchesSearchQuery &&
+        matchesLocation &&
+        matchesPropertyType &&
+        matchesBudget
+      );
     });
-  }, [allProperty, searchQuery]);
+  }, [
+    allProperty,
+    searchQuery,
+    locationFilter,
+    propertyTypeFilter,
+    budgetFilter,
+  ]);
 
   const [filterData, setFilterData] = useState({
     filters: {},
@@ -43,6 +75,12 @@ const PropertyContext = ({ children }) => {
     searchQuery,
     handleSearch,
     filteredProperty,
+    handleLocationChange,
+    handlePropertyTypeChange,
+    handleBudgetChange,
+    locationFilter,
+    propertyTypeFilter,
+    budgetFilter,
   };
 
   return (
