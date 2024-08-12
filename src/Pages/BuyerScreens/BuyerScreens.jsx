@@ -18,7 +18,7 @@ const BuyerScreens = () => {
           Testimonials
         </h3>
       </div>
-      <Testimonials />
+      {/* <Testimonials /> */}
     </>
   );
 };

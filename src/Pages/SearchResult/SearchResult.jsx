@@ -1,5 +1,5 @@
 import { Popover, Steps } from "antd";
-import Testimonials from "../../Components/Testimonials/Testimonials";
+// import Testimonials from "../../Components/Testimonials/Testimonials";
 import IsProperty from "./IsProperty";
 import { Helmet } from "react-helmet";
 
@@ -58,7 +58,7 @@ const SearchResult = () => {
         </div>
       </div>
       <h2 className=" text-4xl font-medium text-center mt-16">Testimonials</h2>
-      <Testimonials />
+      {/* <Testimonials /> */}
     </>
   );
 };

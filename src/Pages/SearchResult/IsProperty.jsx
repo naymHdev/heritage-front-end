@@ -3,14 +3,14 @@ import { useState } from "react";
 import PropertyCard from "./PropertyCard";
 import { Pagination } from "antd";
 import useAllProperty from "../../Hooks/useAllProperty";
+import { useFilterProperty } from "../../Context/PropertyContext";
 
 const IsProperty = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const [allProperty] = useAllProperty();
-  // console.log("allProperty__", allProperty);
+  const { filteredProperty } = useFilterProperty();
 
-  const itemsPerPage = 5;
   const newProject = allProperty.filter(
     (itm) => itm?.category === "New_Projects"
   );
@@ -19,13 +19,13 @@ const IsProperty = () => {
   );
 
   // Calculate start and end indexes for pagination
+  const itemsPerPage = 5;
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
-
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentProperties = allProperty.slice(startIndex, endIndex);
+  const currentProperties = filteredProperty.slice(startIndex, endIndex);
 
   return (
     <>
@@ -54,7 +54,7 @@ const IsProperty = () => {
         <Pagination
           current={currentPage}
           pageSize={itemsPerPage}
-          total={allProperty.length}
+          total={filteredProperty.length}
           onChange={handlePageChange}
           showSizeChanger={false}
           showQuickJumper={true}

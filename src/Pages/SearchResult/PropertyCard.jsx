@@ -9,8 +9,6 @@ const PropertyCard = ({ property }) => {
   const { images, price, location, property_name, details, id } =
     property || {};
 
-  // console.log(images[1].image2);
-
   return (
     <>
       <Link to={`/propertyDetails/${id}`}>

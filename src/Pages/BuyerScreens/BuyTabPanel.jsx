@@ -4,8 +4,11 @@ import { RiHomeSmileLine } from "react-icons/ri";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { useFilterProperty } from "../../Context/PropertyContext";
 
 const BuyTabPanel = () => {
+  const { searchQuery, handleSearch } = useFilterProperty();
+
   return (
     <>
       <div className=" mt-8">
@@ -15,6 +18,8 @@ const BuyTabPanel = () => {
           </span>
           <input
             type="text"
+            value={searchQuery}
+            onChange={handleSearch}
             placeholder="Search properties"
             className="py-2 pl-10 pr-4 block w-full border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-[#055BB2] focus:border-[#055BB2] sm:text-sm"
           />
