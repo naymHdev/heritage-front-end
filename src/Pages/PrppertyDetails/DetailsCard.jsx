@@ -7,12 +7,18 @@ import GoogleMapReact from "google-map-react";
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import { useState } from "react";
+import publicAxios from "../../Hooks/PublicAxios";
+import toast from "react-hot-toast";
+import UseAuth from "../../Auth/UseAuth";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const DetailsCard = ({ detail }) => {
   const [value, setValue] = useState(0);
   // console.log("value__", value);
+
+  const { user } = UseAuth();
+  // console.log("user__", user?.email);
 
   const { images, price, location, property_name, details } = detail || {};
   const different = price + 10;
@@ -23,6 +29,25 @@ const DetailsCard = ({ detail }) => {
       lng: 77.01502627,
     },
     zoom: 11,
+  };
+
+  // Bid property
+  const handelBid = async () => {
+    try {
+      const currentDate = new Date().toISOString();
+      const email = user?.email;
+      const bidsData = { value, details, currentDate, email };
+      const res = await publicAxios.post("/api/bids", bidsData);
+      // console.log("post bids__", res);
+      if (res.data.acknowledged == true) {
+        toast.success("Your bid placed success");
+      } else {
+        toast.error("Bid placed failed!");
+      }
+    } catch (error) {
+      console.log("Bid placed failed!", error);
+      toast.error("Bid placed failed!");
+    }
   };
 
   return (
@@ -195,7 +220,10 @@ const DetailsCard = ({ detail }) => {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <button className="bg-[#055AB1] rounded-md mt-8 text-white px-6 py-3">
+              <button
+                onClick={handelBid}
+                className="bg-[#055AB1] rounded-md mt-8 text-white px-6 py-3"
+              >
                 Bid Property
               </button>
             </div>
