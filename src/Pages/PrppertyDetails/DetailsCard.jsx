@@ -3,28 +3,19 @@ import { TfiLocationPin } from "react-icons/tfi";
 import { LiaBedSolid } from "react-icons/lia";
 import { MdBathtub, MdBalcony } from "react-icons/md";
 import { GiFinishLine } from "react-icons/gi";
-import { Steps, Popover } from "antd";
 import GoogleMapReact from "google-map-react";
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
+import { useState } from "react";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-const customDot = (dot, { status, index }) => (
-  <Popover
-    content={
-      <span>
-        step {index} status: {status}
-      </span>
-    }
-  >
-    {dot}
-  </Popover>
-);
-
 const DetailsCard = ({ detail }) => {
+  const [value, setValue] = useState(0);
+  // console.log("value__", value);
+
   const { images, price, location, property_name, details } = detail || {};
   const different = price + 10;
-
-  console.log(images[1].image2);
 
   const defaultProps = {
     center: {
@@ -167,7 +158,7 @@ const DetailsCard = ({ detail }) => {
                 <label className=" label">Min</label>
                 <input
                   className=" px-3 py-2 rounded-md shadow-sm border-hidden focus:outline-none"
-                  type="number"
+                  value={value[0]}
                   name=""
                   id=""
                   placeholder="$280K"
@@ -177,26 +168,31 @@ const DetailsCard = ({ detail }) => {
                 <label className=" label">Max</label>
                 <input
                   className=" px-3 py-2 rounded-md shadow-sm border-hidden focus:outline-none"
-                  type="number"
+                  value={value[1]}
                   name=""
                   id=""
                   placeholder="$305K"
                 />
               </div>
             </div>
-            <div className=" mt-6 w-full">
-              <Steps
-                current={2}
-                progressDot={customDot}
-                items={[
-                  {
-                    title: "$280K",
-                  },
-                  {
-                    title: "$280K",
-                  },
-                ]}
+            <div className=" mt-8 w-full">
+              <RangeSlider
+                id="range-slider-yellow"
+                value={value}
+                onInput={setValue}
+                min={280}
+                max={305}
               />
+              <div className=" flex items-center justify-between mt-4 text-sm font-medium text-gray-700">
+                <p>
+                  <span>$ </span>
+                  {value[0]}K
+                </p>
+                <p>
+                  <span>$ </span>
+                  {value[1]}K
+                </p>
+              </div>
             </div>
             <div className="flex items-center justify-center">
               <button className="bg-[#055AB1] rounded-md mt-8 text-white px-6 py-3">
