@@ -3,9 +3,23 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import logo from "../../assets/Hertiage Nest - Final LOGO (1) 1.png";
+import UseAuth from "../../Auth/UseAuth";
+import toast from "react-hot-toast";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { user, userLogout } = UseAuth();
+
+  const handelSignOut = () => {
+    try {
+      userLogout();
+      toast.success("User Logout Success!");
+    } catch (error) {
+      console.log("logout error", error);
+      toast.error("User Logout Failed!");
+    }
+  };
 
   return (
     <header className="bg-[#ECF5FF]">
@@ -57,12 +71,25 @@ export default function Header() {
           >
             Manage Rentals
           </a>
-          <a
-            href="/signIn"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Sign in
-          </a>
+          {user ? (
+            <>
+              <button
+                onClick={handelSignOut}
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <a
+                href="/signIn"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Sign in
+              </a>
+            </>
+          )}
         </div>
       </nav>
       <Dialog
@@ -117,12 +144,25 @@ export default function Header() {
                 </a>
               </div>
               <div className="py-6">
-                <a
-                  href="/signIn"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Sign in
-                </a>
+                {user ? (
+                  <>
+                    <button
+                      onClick={handelSignOut}
+                      className="text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Sign Out
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <a
+                      href="/signIn"
+                      className="text-sm font-semibold leading-6 text-gray-900"
+                    >
+                      Sign in
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           </div>
