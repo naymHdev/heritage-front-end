@@ -1,15 +1,20 @@
 [
   {
-    "id": 1,
     "property_name": "Modern Apartment",
     "property_type": "Apartment",
     "location": "123 Main Street, Cityville",
     "price": 2000,
     "details_overview": "A modern apartment with a stunning view of the city skyline.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -26,16 +31,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 2,
     "property_name": "Luxury Villa",
     "property_type": "Villa",
     "location": "456 Elm Street, Townsville",
     "price": 5000,
     "details_overview": "A luxurious villa with spacious rooms and a private pool.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 4,
@@ -52,16 +62,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 3,
     "property_name": "Cozy Cottage",
     "property_type": "Cottage",
     "location": "789 Oak Street, Villagetown",
     "price": 1500,
     "details_overview": "A cozy cottage surrounded by nature, perfect for a peaceful retreat.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -78,16 +93,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 4,
     "property_name": "Spacious Condo",
     "property_type": "Condo",
     "location": "101 Pine Street, Hamletville",
     "price": 3000,
     "details_overview": "A spacious condo with modern amenities and a balcony overlooking the city.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,
@@ -104,16 +124,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 5,
     "property_name": "Rustic Cabin",
     "property_type": "Cabin",
     "location": "321 Cedar Street, Countryside",
     "price": 1000,
     "details_overview": "A charming rustic cabin surrounded by trees, perfect for a weekend getaway.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -130,16 +155,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 6,
     "property_name": "Beachfront Bungalow",
     "property_type": "Bungalow",
     "location": "555 Maple Street, Seaside",
     "price": 4000,
     "details_overview": "A luxurious beachfront bungalow with panoramic views of the ocean.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,
@@ -156,16 +186,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 7,
     "property_name": "City Center Apartment",
     "property_type": "Apartment",
     "location": "777 Beach Road, Downtown",
     "price": 2200,
     "details_overview": "An apartment located in the heart of the city, close to all amenities.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -182,16 +217,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 8,
     "property_name": "Mountain View Chalet",
     "property_type": "Chalet",
     "location": "888 Pine Avenue, Mountain Town",
     "price": 3000,
     "details_overview": "A cozy chalet nestled in the mountains, offering stunning views of the surrounding peaks.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -208,16 +248,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 9,
     "property_name": "Riverfront Retreat",
     "property_type": "Cottage",
     "location": "999 River Road, Riverside",
     "price": 1800,
     "details_overview": "A charming cottage located by the river, perfect for fishing and relaxation.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,
@@ -234,16 +279,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 10,
     "property_name": "Lakeview Lodge",
     "property_type": "Lodge",
     "location": "123 Lakeview Drive, Lakeside",
     "price": 2500,
     "details_overview": "A cozy lodge with a breathtaking view of the lake, perfect for a romantic getaway.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -260,16 +310,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 16,
     "property_name": "Serenity Villa",
     "property_type": "Villa",
     "location": "789 Tranquil Lane, Serenity Town",
     "price": 4000,
     "details_overview": "A serene villa nestled in a peaceful neighborhood, offering privacy and tranquility.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,
@@ -286,16 +341,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 17,
     "property_name": "Country Estate",
     "property_type": "Estate",
     "location": "101 Country Road, Countryside",
     "price": 6000,
     "details_overview": "A sprawling country estate with acres of land, perfect for nature lovers.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 6,
@@ -312,16 +372,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 18,
     "property_name": "Urban Loft",
     "property_type": "Loft",
     "location": "555 Loft Avenue, Downtown",
     "price": 1800,
     "details_overview": "A stylish loft in the heart of the city, with modern design and urban convenience.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -338,16 +403,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 19,
     "property_name": "Riverside Retreat",
     "property_type": "Cottage",
     "location": "321 Riverside Drive, Riverside",
     "price": 1300,
     "details_overview": "A cozy cottage by the riverbank, offering scenic views and a peaceful atmosphere.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -364,16 +434,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 20,
     "property_name": "Hillside Haven",
     "property_type": "Chalet",
     "location": "789 Hilltop Drive, Hillside",
     "price": 2500,
     "details_overview": "A cozy chalet nestled in the hills, offering stunning views and tranquility.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -390,16 +465,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 21,
     "property_name": "Seaside Retreat",
     "property_type": "Beach House",
     "location": "101 Beachfront Avenue, Seaside",
     "price": 3500,
     "details_overview": "A charming beach house with direct access to the beach, perfect for a seaside getaway.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,
@@ -416,16 +496,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 22,
     "property_name": "Urban Oasis",
     "property_type": "Apartment",
     "location": "555 City Center, Metropolis",
     "price": 2300,
     "details_overview": "A luxurious apartment in the bustling city center, offering modern amenities and convenience.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -442,16 +527,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 23,
     "property_name": "Mountain Chalet",
     "property_type": "Chalet",
     "location": "789 Mountain View Road, Mountain Town",
     "price": 2800,
     "details_overview": "A cozy chalet nestled in the mountains, offering breathtaking views and tranquility.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -468,16 +558,21 @@
     "category": "New_Projects"
   },
   {
-    "id": 24,
     "property_name": "Lakefront Lodge",
     "property_type": "Lodge",
     "location": "101 Lakeview Road, Lakeside",
     "price": 1500,
     "details_overview": "A charming lodge located by the lake, offering scenic views and tranquility.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -494,16 +589,21 @@
     "category": "Pre_launch_offers"
   },
   {
-    "id": 25,
     "property_name": "Hillside Villa",
     "property_type": "Villa",
     "location": "789 Hillside Drive, Hilltop",
     "price": 4000,
     "details_overview": "A luxurious villa nestled in the hills, offering stunning views and tranquility.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,

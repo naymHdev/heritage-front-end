@@ -82,7 +82,7 @@ const IsProperty = () => {
         </h3>
         <div>
           {currentProperties?.map((property) => (
-            <PropertyCard key={property?.id} property={property} />
+            <PropertyCard key={property?._id} property={property} />
           ))}
         </div>
         <hr className="mt-5 mb-5 w-8/12" />

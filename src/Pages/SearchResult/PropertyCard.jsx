@@ -6,12 +6,12 @@ import { GiSquare } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const PropertyCard = ({ property }) => {
-  const { images, price, location, property_name, details, id } =
+  const { images, price, location, property_name, details, _id } =
     property || {};
 
   return (
     <>
-      <Link to={`/propertyDetails/${id}`}>
+      <Link to={`/propertyDetails/${_id}`}>
         <div className=" md:placeholder md:flex md:gap-8 bg-[#F9FAFB] md:p-6 p-2 mt-5 rounded-md md:w-8/12 shadow-sm">
           <div className="">
             <div className="bg-[#F9FAFB] flex items-center justify-center">
