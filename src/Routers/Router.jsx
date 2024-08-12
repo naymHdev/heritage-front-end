@@ -9,6 +9,7 @@ import PropertyDetails from "../Pages/PrppertyDetails/PropertyDetails";
 import ManageRentals from "../Components/ManageRentals/ManageRentals";
 import SignIn from "../Auth/SignIn/SignIn";
 import SignUp from "../Auth/SignUp/SignUp";
+import PrivateRoute from "../Auth/PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -38,7 +39,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/manageRentals",
-        element: <ManageRentals />,
+        element: (
+          <PrivateRoute>
+            <ManageRentals />
+          </PrivateRoute>
+        ),
       },
     ],
   },

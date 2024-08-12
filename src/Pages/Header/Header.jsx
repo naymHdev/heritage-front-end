@@ -66,14 +66,12 @@ export default function Header() {
           <img className="h-8 w-auto" src={logo} alt="" />
         </a>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-8">
-          {user && (
-            <a
-              href="/manageRentals"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Manage Rentals
-            </a>
-          )}
+          <a
+            href="/manageRentals"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Manage Rentals
+          </a>
           {user ? (
             <>
               <button
@@ -139,14 +137,12 @@ export default function Header() {
                 >
                   Services
                 </a>
-                {user && (
-                  <a
-                    href="/manageRentals"
-                    className="text-sm font-semibold leading-6 text-gray-900"
-                  >
-                    Manage Rentals
-                  </a>
-                )}
+                <a
+                  href="/manageRentals"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Manage Rentals
+                </a>
               </div>
               <div className="py-6">
                 {user ? (
