@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
 import logo from "../../assets/Hertiage Nest - Final LOGO (1) 1.png";
+import publicAxios from "../../Hooks/PublicAxios";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const {
@@ -12,13 +14,27 @@ const SignUp = () => {
   } = useForm();
 
   const password = watch("password");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
 
-  const onSubmit = (data) => {
-    if (data.password !== data.confirmPassword) {
-      alert("Passwords do not match");
-      return;
+  const onSubmit = async (data) => {
+    try {
+      const currentDate = new Date().toISOString();
+      const roles = "bidder";
+      const userInfo = { ...data, currentDate, roles };
+      const res = await publicAxios.post("/api/signUp", userInfo);
+      // console.log(res);
+      if (res.data.acknowledged) {
+        navigate(from, { replace: true });
+        toast.success("Your sign up completed.");
+      } else {
+        toast.error("Failed your sign up!");
+      }
+    } catch (error) {
+      // console.log("Sign up post error", error);
+      toast.error("Sign up post error", error.message);
     }
-    console.log(data);
   };
 
   return (
