@@ -10,6 +10,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const { user, userLogout } = UseAuth();
+  // console.log("user", user);
 
   const handelSignOut = () => {
     try {

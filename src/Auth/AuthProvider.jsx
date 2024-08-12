@@ -32,9 +32,19 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const userLogIn = (email, password) => {
+  const userLogIn = async (data) => {
     setLoading(true);
-    return signInWithEmailAndPassword(auth, email, password);
+    const { email, password } = data;
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      return { success: true, user: userCredential.user };
+    } catch (error) {
+      return { success: false, message: error.message };
+    }
   };
 
   const userLogout = () => {
@@ -55,6 +65,7 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     loading,
+    setLoading,
     createUser,
     userLogIn,
     userLogout,

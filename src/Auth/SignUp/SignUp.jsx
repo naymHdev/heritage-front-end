@@ -4,8 +4,11 @@ import SocialLogIn from "../SocialLogIn/SocialLogIn";
 import logo from "../../assets/Hertiage Nest - Final LOGO (1) 1.png";
 import publicAxios from "../../Hooks/PublicAxios";
 import toast from "react-hot-toast";
+import UseAuth from "../UseAuth";
 
 const SignUp = () => {
+  const { loading, setLoading, createUser } = UseAuth();
+
   const {
     register,
     handleSubmit,
@@ -19,7 +22,9 @@ const SignUp = () => {
   const from = location?.state?.from?.pathname || "/";
 
   const onSubmit = async (data) => {
+    setLoading(true);
     try {
+      await createUser(data.email, data.password);
       const currentDate = new Date().toISOString();
       const roles = "bidder";
       const userInfo = { ...data, currentDate, roles };
@@ -32,7 +37,8 @@ const SignUp = () => {
         toast.error("Failed your sign up!");
       }
     } catch (error) {
-      // console.log("Sign up post error", error);
+      setLoading(false);
+      console.log("Sign up post error", error);
       toast.error("Sign up post error", error.message);
     }
   };
@@ -116,9 +122,10 @@ const SignUp = () => {
           <div>
             <button
               type="submit"
+              disabled={loading}
               className="bg-[#055AB1] font-medium text-xl text-white rounded-md py-4 w-full text-center"
             >
-              Sign Up
+              {loading ? "Logging in..." : "Sign Up"}
             </button>
           </div>
         </form>

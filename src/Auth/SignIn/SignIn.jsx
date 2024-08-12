@@ -1,17 +1,38 @@
 import { useForm } from "react-hook-form";
 import SocialLogIn from "../SocialLogIn/SocialLogIn";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/Hertiage Nest - Final LOGO (1) 1.png";
+import UseAuth from "../UseAuth";
+import toast from "react-hot-toast";
 
 const SignIn = () => {
+  const { loading, userLogIn, setLoading } = UseAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state?.from?.pathname || "/";
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    setLoading(true);
+    try {
+      const response = await userLogIn(data);
+      // console.log(response);
+      if (response.success) {
+        navigate(from, { replace: true });
+        toast.success("Login successful.");
+      } else {
+        toast.error("Login failed: " + response.message);
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error("Login error:", error);
+      toast.error("An error occurred during login.");
+    }
   };
 
   return (
@@ -62,9 +83,10 @@ const SignIn = () => {
           <div>
             <button
               type="submit"
-              className="bg-[#055AB1] font-medium text-xl text-white rounded-md py-4 w-full text-center"
+              className="bg-blue-500 text-white py-2 px-4 rounded w-full"
+              disabled={loading}
             >
-              Sign In
+              {loading ? "Logging in..." : "Sign In"}
             </button>
           </div>
         </form>
