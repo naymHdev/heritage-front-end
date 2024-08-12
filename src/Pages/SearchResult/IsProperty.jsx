@@ -2,11 +2,15 @@
 import { useState } from "react";
 import PropertyCard from "./PropertyCard";
 import { Pagination } from "antd";
+import useAllProperty from "../../Hooks/useAllProperty";
 
-const IsProperty = ({ allProperty }) => {
+const IsProperty = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
 
+  const [allProperty] = useAllProperty();
+  // console.log("allProperty__", allProperty);
+
+  const itemsPerPage = 5;
   const newProject = allProperty.filter(
     (itm) => itm?.category === "New_Projects"
   );

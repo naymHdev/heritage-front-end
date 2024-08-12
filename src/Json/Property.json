@@ -7,9 +7,15 @@
     "price": 1500,
     "details_overview": "A cozy apartment located in the heart of the city. Close to amenities and public transportation.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -32,9 +38,15 @@
     "price": 2500,
     "details_overview": "A spacious house with a large backyard, perfect for families.",
     "images": [
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" },
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" }
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      },
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      }
     ],
     "details": {
       "bedrooms": 4,
@@ -57,9 +69,15 @@
     "price": 1800,
     "details_overview": "A modern loft with high ceilings and an open floor plan.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -82,9 +100,15 @@
     "price": 3000,
     "details_overview": "A luxurious condo with state-of-the-art amenities.",
     "images": [
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" },
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" }
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      },
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      }
     ],
     "details": {
       "bedrooms": 3,
@@ -107,9 +131,15 @@
     "price": 1200,
     "details_overview": "A charming cottage nestled in the countryside, perfect for a weekend getaway.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 2,
@@ -132,9 +162,15 @@
     "price": 1000,
     "details_overview": "A rustic cabin surrounded by nature, ideal for those seeking solitude.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 1,
@@ -157,9 +193,15 @@
     "price": 5000,
     "details_overview": "A luxurious beachfront villa with breathtaking ocean views.",
     "images": [
-      { "image1": "https://i.ibb.co/4TYK3dm/room1.jpg" },
-      { "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg" },
-      { "image3": "https://i.ibb.co/L9zK3yS/room3.jpg" }
+      {
+        "image1": "https://i.ibb.co/4TYK3dm/room1.jpg"
+      },
+      {
+        "image2": "https://i.ibb.co/7Xk1HSQ/room2.jpg"
+      },
+      {
+        "image3": "https://i.ibb.co/L9zK3yS/room3.jpg"
+      }
     ],
     "details": {
       "bedrooms": 5,

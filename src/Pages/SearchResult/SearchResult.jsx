@@ -1,6 +1,5 @@
 import { Popover, Steps } from "antd";
 import Testimonials from "../../Components/Testimonials/Testimonials";
-import useAllProperty from "../../Hooks/useAllProperty";
 import IsProperty from "./IsProperty";
 import { Helmet } from "react-helmet";
 
@@ -17,8 +16,6 @@ const customDot = (dot, { status, index }) => (
 );
 
 const SearchResult = () => {
-  const [allProperty] = useAllProperty();
-
   const items = [
     {
       title: "$20K",
@@ -43,7 +40,7 @@ const SearchResult = () => {
         <title>Nest Nestle || Search Result</title>
       </Helmet>
       <div className=" w-11/12 mx-auto mt-11">
-        <IsProperty allProperty={allProperty} />
+        <IsProperty />
       </div>
       <div className="md:flex items-center justify-center gap-5 mt-16 bg-[#ECF5FF] w-11/12 mx-auto rounded-md p-8">
         <div className=" w-full">

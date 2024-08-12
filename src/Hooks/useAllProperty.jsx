@@ -1,18 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import publicAxios from "./PublicAxios";
 
 const useAllProperty = () => {
-  const { data: allProperty = [] } = useQuery({
+  const { data: allProperty = [], refetch } = useQuery({
     queryKey: ["allProperty"],
     queryFn: async () => {
-      const res = await axios.get(
-        "https://raw.githubusercontent.com/naymHdev/Nest-Nestle-CC/main/src/Json/SearchProperty.json"
-      );
+      const res = await publicAxios.get("/api/property");
       return res.data;
     },
   });
 
-  return [allProperty];
+  return [allProperty, refetch];
 };
 
 export default useAllProperty;
