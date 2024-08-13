@@ -1,7 +1,8 @@
-import { Divider } from "antd";
 import { useState } from "react";
-import { HiChartPie, HiShoppingBag, HiMenu, HiHome } from "react-icons/hi";
+import { HiChartPie, HiShoppingBag, HiMenu } from "react-icons/hi";
+import { IoHomeSharp } from "react-icons/io5";
 import useUser from "../../../Hooks/useUser";
+import { GrGroup } from "react-icons/gr";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -23,12 +24,12 @@ const Sidebar = () => {
         onClick={handleSidebarToggle}
       ></div>
       <aside
-        className={`fixed top-0 left-0 z-50 w-64 bg-white h-full shadow-lg transition-transform ${
+        className={`fixed top-0 left-0 z-50 w-64 bg-[#ECF5FF] h-full shadow-lg transition-transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 md:w-64`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-semibold">MENU</h2>
+          <h2 className="text-xl font-semibold">Heritage Nest</h2>
           <button
             className="text-gray-600 md:hidden"
             onClick={handleSidebarToggle}
@@ -46,6 +47,24 @@ const Sidebar = () => {
           </form>
           <nav>
             <ul className="space-y-2">
+              <li>
+                <a
+                  href="/"
+                  className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
+                >
+                  <IoHomeSharp className="mr-2 text-xl" /> Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
+                >
+                  <HiChartPie className="mr-2 text-xl" /> Dashboard
+                </a>
+              </li>
+            </ul>
+            <ul className="space-y-2">
               {getRole?.roles == "admin" && (
                 <>
                   <li>
@@ -53,7 +72,7 @@ const Sidebar = () => {
                       href="/allUsers"
                       className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
                     >
-                      <HiChartPie className="mr-2 text-xl" /> Manages Users
+                      <GrGroup className="mr-2 text-xl" /> Manages Users
                     </a>
                   </li>
                 </>
@@ -72,27 +91,6 @@ const Sidebar = () => {
                   </li>
                 </>
               )}
-            </ul>
-            <div>
-              <Divider />
-            </div>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="/"
-                  className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
-                >
-                  <HiHome className="mr-2 text-xl" /> Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/addProperties"
-                  className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
-                >
-                  <HiShoppingBag className="mr-2 text-xl" /> Logout
-                </a>
-              </li>
             </ul>
           </nav>
         </div>
