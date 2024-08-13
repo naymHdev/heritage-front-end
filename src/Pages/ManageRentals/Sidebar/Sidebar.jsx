@@ -3,6 +3,7 @@ import { HiChartPie, HiShoppingBag, HiMenu } from "react-icons/hi";
 import { IoHomeSharp } from "react-icons/io5";
 import useUser from "../../../Hooks/useUser";
 import { GrGroup } from "react-icons/gr";
+import { GiSpookyHouse } from "react-icons/gi";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -76,6 +77,15 @@ const Sidebar = () => {
                       className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
                     >
                       <GrGroup className="mr-2 text-xl" /> Manages Users
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/manageProperties"
+                      className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
+                    >
+                      <GiSpookyHouse className="mr-2 text-xl" /> Manage
+                      Properties
                     </a>
                   </li>
                 </>

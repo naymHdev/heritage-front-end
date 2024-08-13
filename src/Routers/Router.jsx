@@ -13,6 +13,7 @@ import ManageRentals from "../Pages/ManageRentals/ManageRentals";
 import RentalsLayout from "../Layouts/RentalsLayout";
 import AllUsers from "../Pages/ManageRentals/Roles/Admin/AllUsers";
 import AddProperties from "../Pages/ManageRentals/Roles/PropertyOwner/AddProperties";
+import ManageProperties from "../Pages/ManageRentals/Roles/Admin/ManageProperties";
 
 const Router = createBrowserRouter([
   {
@@ -65,10 +66,17 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      // Admin routes
       {
         path: "/allUsers",
         element: <AllUsers />,
       },
+      {
+        path: "/manageProperties",
+        element: <ManageProperties />,
+      },
+
+      // Owner routes
       {
         path: "/addProperties",
         element: <AddProperties />,

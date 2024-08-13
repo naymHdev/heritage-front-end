@@ -6,7 +6,9 @@ const RentalsLayout = () => {
     <>
       <div>
         <Sidebar />
-        <Outlet />
+        <div className="md:pl-[300px] px-4 max-w-7xl mx-auto">
+          <Outlet />
+        </div>
       </div>
     </>
   );
