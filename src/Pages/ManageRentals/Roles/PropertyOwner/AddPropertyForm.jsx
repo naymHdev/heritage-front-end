@@ -9,12 +9,6 @@ const AddProperties = () => {
 
   const [allProperty] = useAllProperty();
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
   useEffect(() => {
     // Fetch country data from RestCountries API
     const fetchCountries = async () => {
@@ -32,41 +26,14 @@ const AddProperties = () => {
     fetchCountries();
   }, []);
 
-  const onSubmit = (data) => {
-    const propertyData = {
-      property_name: data.propertyName,
-      property_type: data.propertyType,
-      location: data.mapLocation,
-      country: data.country,
-      address: data.address,
-      city: data.city,
-      state: data.state,
-      zipCode: data.zipCode,
-      price: data.price,
-      details_overview: data.overview,
-      taxRate: data.taxRate,
-      images: [
-        { image1: data.image1 },
-        { image2: data.image2 },
-        { image3: data.image3 },
-      ],
-      details: {
-        kitchens: data.kitchens,
-        bedrooms: data.bedrooms,
-        bathrooms: data.bathrooms,
-        fully_furnished: data.furnished,
-        carpet_area: data.size,
-        floor: data.floors,
-        transaction_type: data.listedIn,
-        facing: data.facing,
-        additional_rooms: data.additionalRooms,
-        age_of_construction: data.yearBuilt,
-      },
-      amenities: [data.amenities],
-      category: data.category,
-    };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    console.log(propertyData);
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
@@ -87,11 +54,11 @@ const AddProperties = () => {
                   Property Title
                 </label>
                 <input
-                  {...register("propertyName", { required: true })}
+                  {...register("propertyTitle", { required: true })}
                   className="w-full px-4 py-3 focus:outline-none border rounded-md"
                   placeholder="Your Property Name"
                 />
-                {errors.propertyName && (
+                {errors.propertyTitle && (
                   <span className="text-red-500">This field is required</span>
                 )}
               </div>
@@ -100,21 +67,21 @@ const AddProperties = () => {
                   Description
                 </label>
                 <textarea
-                  {...register("overview", { required: true })}
+                  {...register("description", { required: true })}
                   className="w-full px-4 py-3 focus:outline-none border rounded-md"
                   placeholder="Write about property..."
                 />
-                {errors.overview && (
+                {errors.description && (
                   <span className="text-red-500">This field is required</span>
                 )}
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block font-medium text-gray-700 mb-2">
-                    Property Type
+                    Category
                   </label>
                   <select
-                    {...register("propertyType")}
+                    {...register("category")}
                     className="w-full px-4 py-3 focus:outline-none border rounded-md"
                   >
                     <option disabled value="">
@@ -164,15 +131,14 @@ const AddProperties = () => {
                 </div>
                 <div>
                   <label className="block font-medium text-gray-700 mb-2">
-                    Fully Furnished
+                    Yearly Tax Rate
                   </label>
-                  <select
-                    {...register("furnished")}
-                    className="w-full px-4 py-3 border rounded-md"
-                  >
-                    <option value={true}>Yes</option>
-                    <option value={false}>No</option>
-                  </select>
+                  <input
+                    {...register("taxRate")}
+                    type="number"
+                    className="w-full px-4 py-3 focus:outline-none border rounded-md"
+                    placeholder="Tax Rate"
+                  />
                 </div>
               </div>
             </div>
@@ -222,19 +188,46 @@ const AddProperties = () => {
                     <option value="3">3</option>
                   </select>
                 </div>
-                <div className="mb-4">
+                <div>
                   <label className="block font-medium text-gray-700 mb-2">
-                    Category
+                    Kitchens
                   </label>
                   <select
-                    {...register("category")}
-                    className="w-full px-4 py-3 border rounded-md"
+                    {...register("kitchens")}
+                    className="w-full px-4 py-3 focus:outline-none border rounded-md"
                   >
-                    <option value="New_Projects">New Projects</option>
-                    <option value="Pre_launch_offers">Pre_launch_offers</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block font-medium text-gray-700 mb-2">
+                    Garages
+                  </label>
+                  <select
+                    {...register("garages")}
+                    className="w-full px-4 py-3 focus:outline-none border rounded-md"
+                  >
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                   </select>
                 </div>
 
+                <div>
+                  <label className="block font-medium text-gray-700 mb-2">
+                    Garage Size
+                  </label>
+                  <input
+                    {...register("garageSize")}
+                    className="w-full px-4 py-3 focus:outline-none border rounded-md"
+                    placeholder="Ex: 1,230 sqft"
+                  />
+                </div>
                 <div>
                   <label className="block font-medium text-gray-700 mb-2">
                     Year Built
@@ -257,26 +250,16 @@ const AddProperties = () => {
                     placeholder="Type No"
                   />
                 </div>
-                <div>
-                  <label className="block font-medium text-gray-700 mb-2">
-                    Additional Rooms
-                  </label>
-                  <input
-                    {...register("additionalRooms")}
-                    className="w-full px-4 py-3 border rounded-md"
-                    placeholder="Comma-separated rooms (e.g., Living Room, Kitchen)"
-                  />
-                </div>
-                <div>
-                  <label className="block font-medium text-gray-700 mb-2">
-                    Facing
-                  </label>
-                  <input
-                    {...register("facing")}
-                    className="w-full px-4 py-3 border rounded-md"
-                    placeholder="Facing Direction"
-                  />
-                </div>
+              </div>
+              <div className=" mt-6">
+                <label className="block font-medium text-gray-700 mb-2">
+                  Additional Description
+                </label>
+                <textarea
+                  {...register("additionalDescription")}
+                  className="w-full px-4 py-3 focus:outline-none border rounded-md"
+                  placeholder="Write additional info..."
+                />
               </div>
             </div>
 
@@ -287,41 +270,13 @@ const AddProperties = () => {
               </h2>
               <div>
                 <label className="block font-medium text-gray-700 mb-2">
-                  File Attachment | Add Image Link
+                  File Attachment
                 </label>
-                <div className="mb-4">
-                  <label className="block font-medium text-gray-700 mb-2">
-                    Image 1
-                  </label>
-                  <input
-                    {...register("image1")}
-                    type="url"
-                    className="w-full px-4 py-3 border rounded-md"
-                    placeholder="Image URL 1"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block font-medium text-gray-700 mb-2">
-                    Image 2
-                  </label>
-                  <input
-                    {...register("image2")}
-                    type="url"
-                    className="w-full px-4 py-3 border rounded-md"
-                    placeholder="Image URL 2"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block font-medium text-gray-700 mb-2">
-                    Image 3
-                  </label>
-                  <input
-                    {...register("image3")}
-                    type="url"
-                    className="w-full px-4 py-3 border rounded-md"
-                    placeholder="Image URL 3"
-                  />
-                </div>
+                <input
+                  {...register("fileAttachment")}
+                  type="file"
+                  className="w-full px-4 py-3 focus:outline-none border rounded-md"
+                />
               </div>
             </div>
 
