@@ -483,7 +483,7 @@ const AddProperties = () => {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-4 mt-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 items-center gap-4 mt-4">
                 <div>
                   <label className="block font-medium text-gray-700 mb-2">
                     Zip Code
