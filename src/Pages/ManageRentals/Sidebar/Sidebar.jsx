@@ -4,6 +4,7 @@ import { IoHomeSharp } from "react-icons/io5";
 import useUser from "../../../Hooks/useUser";
 import { GrGroup } from "react-icons/gr";
 import { GiSpookyHouse } from "react-icons/gi";
+import logo from "../../../assets/Hertiage Nest - Final LOGO (1) 1.png";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -30,9 +31,15 @@ const Sidebar = () => {
         } md:translate-x-0 md:w-64`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-semibold">
-            Heritage Nest <span className=" text-sm">({getRole?.roles})</span>
-          </h2>
+          <div className=" flex flex-col items-center justify-center">
+            <img className="h-16 w-auto" src={logo} alt="" />
+            <h2 className="text-3xl mt-1 font-semibold text-center">
+              Heritage Nest
+            </h2>
+            <p className=" text-sm font-medium mt-1 text-gray-600">
+              {getRole?.roles}
+            </p>
+          </div>
 
           <button
             className="text-gray-600 md:hidden"
