@@ -18,7 +18,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex absolute">
       {/* Sidebar for mobile devices */}
       <div
         className={`fixed inset-0 z-40 bg-gray-800 bg-opacity-75 transition-opacity ${
@@ -41,24 +41,16 @@ const Sidebar = () => {
               {getRole?.roles}
             </p>
           </div>
-
-          <button
+          {/* <button
             className="text-gray-600 md:hidden"
             onClick={handleSidebarToggle}
           >
             <HiMenu className="text-2xl" />
-          </button>
+          </button> */}
         </div>
         <div className="p-4">
-          <form className="mb-4 md:hidden">
-            <input
-              type="search"
-              placeholder="Search"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </form>
-          <nav>
-            <ul className="space-y-2">
+          <nav className=" mt-3">
+            <ul className="space-y-3">
               <li>
                 <a
                   href="/"
@@ -76,7 +68,7 @@ const Sidebar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {getRole?.roles == "admin" && (
                 <>
                   <li>
@@ -102,7 +94,7 @@ const Sidebar = () => {
               {/* Property owners menus */}
               {getRole?.roles == "propertyOwner" && (
                 <>
-                  <li>
+                  <li className=" mt-2">
                     <a
                       href="/addProperties"
                       className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
@@ -119,12 +111,11 @@ const Sidebar = () => {
       {/* Main content */}
       <main className="flex-1">
         <button
-          className="md:hidden p-2 mb-4 bg-blue-500 text-white rounded-md"
+          className="md:hidden p-2 mb-4 rounded-md absolute top-[8px] left-[315px]"
           onClick={handleSidebarToggle}
         >
-          <HiMenu className="text-2xl" />
+          <HiMenu className="text-3xl" />
         </button>
-        {/* Your main content goes here */}
       </main>
     </div>
   );
