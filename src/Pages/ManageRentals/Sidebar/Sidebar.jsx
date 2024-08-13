@@ -8,7 +8,7 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const { getRole } = useUser();
-  console.log("role__", getRole?.roles);
+  // console.log("role__", getRole?.roles);
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -29,7 +29,10 @@ const Sidebar = () => {
         } md:translate-x-0 md:w-64`}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-semibold">Heritage Nest</h2>
+          <h2 className="text-xl font-semibold">
+            Heritage Nest <span className=" text-sm">({getRole?.roles})</span>
+          </h2>
+
           <button
             className="text-gray-600 md:hidden"
             onClick={handleSidebarToggle}
