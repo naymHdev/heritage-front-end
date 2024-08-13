@@ -3,6 +3,8 @@ import DashBoardSectionName from "../../../../Components/DashBoardSectionName";
 import useAllProperty from "../../../../Hooks/useAllProperty";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import publicAxios from "../../../../Hooks/PublicAxios";
+import toast from "react-hot-toast";
 
 const AddProperties = () => {
   const [countries, setCountries] = useState([]);
@@ -32,7 +34,7 @@ const AddProperties = () => {
     fetchCountries();
   }, []);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const propertyData = {
       property_name: data.propertyName,
       property_type: data.propertyType,
@@ -63,6 +65,19 @@ const AddProperties = () => {
     };
 
     console.log(propertyData);
+
+    try {
+      const res = await publicAxios.post("/api/property", propertyData);
+      console.log("add result", res.data);
+      if (res?.data.acknowledged) {
+        toast.success("Property Added Success");
+      } else {
+        toast.error("Property Added Failed!");
+      }
+    } catch (error) {
+      console.log("addProperty form", error);
+      toast.error("Property Added Failed!", error.message);
+    }
   };
 
   return (
