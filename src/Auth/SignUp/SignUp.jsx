@@ -5,9 +5,11 @@ import logo from "../../assets/Hertiage Nest - Final LOGO (1) 1.png";
 import publicAxios from "../../Hooks/PublicAxios";
 import toast from "react-hot-toast";
 import UseAuth from "../UseAuth";
+import useUser from "../../Hooks/useUser";
 
 const SignUp = () => {
   const { loading, setLoading, createUser } = UseAuth();
+  const { refetch } = useUser();
 
   const {
     register,
@@ -32,6 +34,7 @@ const SignUp = () => {
       // console.log(res);
       if (res.data.acknowledged) {
         navigate(from, { replace: true });
+        refetch();
         toast.success("Your sign up completed.");
       } else {
         toast.error("Failed your sign up!");
