@@ -92,21 +92,21 @@ const DetailsCard = ({ detail }) => {
               <div className=" flex items-center justify-center gap-2">
                 <LiaBedSolid className=" text-xl" />
                 <p className=" flex items-center gap-1">
-                  {details?.bedrooms}
+                  {details?.bedrooms && details?.bedrooms}
                   <span className=" text-gray-800 font-thin">Beds</span>
                 </p>
               </div>
               <div className=" flex items-center justify-center gap-2">
                 <MdBathtub className=" text-xl" />
                 <p className=" flex items-center gap-1">
-                  {details?.bathrooms}
+                  {details?.bathrooms && details?.bathrooms}
                   <span className=" text-gray-800 font-thin">Bath</span>
                 </p>
               </div>
               <div className=" flex items-center justify-center gap-2">
                 <MdBalcony className=" text-xl" />
                 <p className=" flex items-center gap-1">
-                  {details?.bedrooms}
+                  {details?.bedrooms && details?.bedrooms}
                   <span className=" text-gray-800 font-thin">Balcony</span>
                 </p>
               </div>
@@ -124,26 +124,32 @@ const DetailsCard = ({ detail }) => {
                 <div>
                   <div className=" space-y-1">
                     <p className=" font-medium text-gray-500">Carpet Area</p>
-                    <p className=" font-bold">{details?.carpet_area} sqft</p>
+                    <p className=" font-bold">
+                      {details?.carpet_area && details?.carpet_area} sqft
+                    </p>
                     <p className=" font-medium text-gray-500">$ 225/sqft</p>
                   </div>
                   <div className=" mt-5">
                     <p className=" font-medium text-gray-500">Facing</p>
-                    <p className=" font-bold">{details?.facing}</p>
+                    <p className=" font-bold">
+                      {details?.facing && details?.facing}
+                    </p>
                   </div>
                 </div>
                 <div>
                   <div className=" space-y-1">
                     <p className=" font-medium text-gray-500">Floor</p>
                     <p className=" font-bold">
-                      {details?.floor} (Out of 6th floor)
+                      {details?.floor && details?.floor} (Out of 6th floor)
                     </p>
                   </div>
                   <div className=" mt-12">
                     <p className=" font-medium text-gray-500">
                       Additional Rooms
                     </p>
-                    <p className=" font-medium">{details?.additional_rooms}</p>
+                    <p className=" font-medium">
+                      {details?.additional_rooms && details?.additional_rooms}
+                    </p>
                   </div>
                 </div>
                 <div>
@@ -151,14 +157,18 @@ const DetailsCard = ({ detail }) => {
                     <p className=" font-medium text-gray-500">
                       Transaction Type
                     </p>
-                    <p className=" font-bold">{details?.transaction_type}</p>
+                    <p className=" font-bold">
+                      {details?.transaction_type && details?.transaction_type}
+                    </p>
                   </div>
                   <div className=" mt-12">
                     <p className=" font-medium text-gray-500">
                       Age of construction
                     </p>
                     <p className=" font-bold">
-                      {details?.age_of_construction} Year of Construction
+                      {details?.age_of_construction &&
+                        details?.age_of_construction}
+                      Year of Construction
                     </p>
                   </div>
                 </div>
