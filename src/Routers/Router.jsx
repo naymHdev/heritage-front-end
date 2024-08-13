@@ -6,10 +6,13 @@ import BuyerScreens from "../Pages/BuyerScreens/BuyerScreens";
 import About from "../Pages/About/About";
 import SearchResult from "../Pages/SearchResult/SearchResult";
 import PropertyDetails from "../Pages/PrppertyDetails/PropertyDetails";
-import ManageRentals from "../Components/ManageRentals/ManageRentals";
 import SignIn from "../Auth/SignIn/SignIn";
 import SignUp from "../Auth/SignUp/SignUp";
 import PrivateRoute from "../Auth/PrivateRoute";
+import ManageRentals from "../Pages/ManageRentals/ManageRentals";
+import RentalsLayout from "../Layouts/RentalsLayout";
+import AllUsers from "../Pages/ManageRentals/Roles/Admin/AllUsers";
+import AddProperties from "../Pages/ManageRentals/Roles/PropertyOwner/AddProperties";
 
 const Router = createBrowserRouter([
   {
@@ -37,14 +40,6 @@ const Router = createBrowserRouter([
         path: "/propertyDetails/:_id",
         element: <PropertyDetails />,
       },
-      {
-        path: "/manageRentals",
-        element: (
-          <PrivateRoute>
-            <ManageRentals />
-          </PrivateRoute>
-        ),
-      },
     ],
   },
   {
@@ -54,6 +49,31 @@ const Router = createBrowserRouter([
   {
     path: "/signUp",
     element: <SignUp />,
+  },
+
+  // dashboard layout menus
+
+  {
+    path: "/",
+    element: <RentalsLayout />,
+    children: [
+      {
+        path: "/manageRentals",
+        element: (
+          <PrivateRoute>
+            <ManageRentals />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/allUsers",
+        element: <AllUsers />,
+      },
+      {
+        path: "/addProperties",
+        element: <AddProperties />,
+      },
+    ],
   },
 ]);
 

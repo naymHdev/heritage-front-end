@@ -53,7 +53,7 @@ const DetailsCard = ({ detail }) => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-7 gap-5 mt-5">
-        <div className="md:col-span-5">
+        <div className="md:col-span-5 col-span-full">
           <div className=" flex items-center justify-between w-full border-b-2 pb-2 ">
             <div>
               <h3 className=" text-xl font-semibold">{property_name}</h3>
@@ -169,6 +169,8 @@ const DetailsCard = ({ detail }) => {
             </div>
           </div>
         </div>
+
+        {/* Right side colum */}
         <div className="md:col-span-2">
           <div className="bg-[#ECF5FF] rounded-md p-5 mt-[85px]">
             <p>property value</p>
