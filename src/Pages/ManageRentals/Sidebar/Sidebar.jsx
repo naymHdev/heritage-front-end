@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { HiChartPie, HiShoppingBag, HiMenu } from "react-icons/hi";
+import { HiChartPie, HiMenu } from "react-icons/hi";
 import { IoHomeSharp } from "react-icons/io5";
 import useUser from "../../../Hooks/useUser";
 import { GrGroup } from "react-icons/gr";
 import { GiSpookyHouse } from "react-icons/gi";
+import { MdAdd } from "react-icons/md";
 import logo from "../../../assets/Hertiage Nest - Final LOGO (1) 1.png";
 
 const Sidebar = () => {
@@ -26,7 +27,7 @@ const Sidebar = () => {
         onClick={handleSidebarToggle}
       ></div>
       <aside
-        className={`fixed top-0 left-0 z-50 w-64 bg-[#ECF5FF] h-full shadow-lg transition-transform ${
+        className={`fixed top-0 left-0 z-50 w-64 bg-white h-full shadow-lg transition-transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 md:w-64`}
       >
@@ -106,7 +107,7 @@ const Sidebar = () => {
                       href="/addProperties"
                       className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
                     >
-                      <HiShoppingBag className="mr-2 text-xl" /> Add Properties
+                      <MdAdd className="mr-2 text-xl" /> Add Properties
                     </a>
                   </li>
                 </>
@@ -116,7 +117,7 @@ const Sidebar = () => {
         </div>
       </aside>
       {/* Main content */}
-      <main className="flex-1 p-4">
+      <main className="flex-1">
         <button
           className="md:hidden p-2 mb-4 bg-blue-500 text-white rounded-md"
           onClick={handleSidebarToggle}
