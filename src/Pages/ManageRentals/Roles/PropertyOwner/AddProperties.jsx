@@ -1,9 +1,30 @@
 import { useForm } from "react-hook-form";
 import DashBoardSectionName from "../../../../Components/DashBoardSectionName";
 import useAllProperty from "../../../../Hooks/useAllProperty";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const AddProperties = () => {
+  const [countries, setCountries] = useState([]);
+
   const [allProperty] = useAllProperty();
+
+  useEffect(() => {
+    // Fetch country data from RestCountries API
+    const fetchCountries = async () => {
+      try {
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        const sortedCountries = response.data.sort((a, b) =>
+          a.name.common.localeCompare(b.name.common)
+        );
+        setCountries(sortedCountries);
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    };
+
+    fetchCountries();
+  }, []);
 
   const {
     register,
@@ -437,12 +458,19 @@ const AddProperties = () => {
                     Country
                   </label>
                   <select
-                    {...register("country")}
+                    {...register("country", { required: true })}
                     className="w-full px-4 py-3 focus:outline-none border rounded-md"
                   >
-                    <option value="Afghanistan">Afghanistan</option>
-                    {/* Add more countries */}
+                    <option value="">Select a Country</option>
+                    {countries.map((country) => (
+                      <option key={country.cca3} value={country.name.common}>
+                        {country.name.common}
+                      </option>
+                    ))}
                   </select>
+                  {errors.country && (
+                    <span className="text-red-500">This field is required</span>
+                  )}
                 </div>
                 <div>
                   <label className="block font-medium text-gray-700 mb-2">
