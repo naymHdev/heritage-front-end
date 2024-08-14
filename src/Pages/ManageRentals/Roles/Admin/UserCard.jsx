@@ -2,6 +2,7 @@
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import publicAxios from "../../../../Hooks/PublicAxios";
 import toast from "react-hot-toast";
+import UserEditModal from "./UserEditModal";
 
 const UserCard = ({ user, refetch }) => {
   const { email, name, roles, _id } = user || {};
@@ -17,6 +18,7 @@ const UserCard = ({ user, refetch }) => {
       }
     } catch (error) {
       console.log("user deleted", error);
+      toast.error("User deleted failed!");
     }
   };
 
@@ -31,9 +33,7 @@ const UserCard = ({ user, refetch }) => {
           </div>
           <div className=" border-b w-full my-6" />
           <div className=" flex items-center justify-between">
-            <button>
-              <EditOutlined key="edit" />
-            </button>
+            <UserEditModal EditOutlined={EditOutlined} name={name} />
             <button
               onClick={() => {
                 handleDelete(_id);
