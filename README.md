@@ -1,7 +1,6 @@
-# [Nest Nestle](https://nest-nestle.netlify.app)
+# [Heritage Nest](https://heritage-front-end.vercel.app)
 
-
-Nest Nestle is a property rental website designed to help users find their ideal rental properties with ease. With a user-friendly interface and powerful search functionality, users can browse through a wide range of rental listings and find their perfect nest.
+Heritage Nest is a property rental website designed to help users find their ideal rental properties with ease. With a user-friendly interface and powerful search functionality, users can browse through a wide range of rental listings and find their perfect nest.
 
 ## Features
 
@@ -22,31 +21,37 @@ Nest Nestle is a property rental website designed to help users find their ideal
 
 To run the project locally, follow these steps:
 
-1. Clone the repository:
+1. Clone the repository | front-end
 
    ```bash
-   git clone https://github.com/naymHdev/Nest-Nestle-CC
+   git clone https://github.com/naymHdev/heritage-front-end
    ```
 
-2. Navigate to the project directory:
+2. Clone the repository | back-end
 
    ```bash
-   cd Nest-Nestle-CC
+   git clone https://github.com/naymHdev/heritage-back-end
    ```
 
-3. Install dependencies:
+3. Navigate to the project directory:
+
+   ```bash
+   cd project name
+   ```
+
+4. Install dependencies:
 
    ```bash
    yarn
    ```
 
-4. Start the development server:
+5. Start the development server:
 
    ```bash
    yarn run dev
    ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser to view the website.
+6. Open [http://localhost:5173](http://localhost:5173) in your browser to view the website.
 
 ## Contributing
 
@@ -62,5 +67,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to [Unsplash](https://unsplash.com/) for providing high-quality images for property listings.
 
 ---
+
 Thank You. ✌️
+
 # heritage-front-end

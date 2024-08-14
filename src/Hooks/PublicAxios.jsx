@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an Axios instance with default configuration
 const publicAxios = axios.create({
-  baseURL: "https://heritage-back-end.vercel.app",
+  baseURL: "http://localhost:3000",
   withCredentials: true,
 });
 
