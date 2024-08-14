@@ -4,7 +4,7 @@ import { Card } from "antd";
 const { Meta } = Card;
 
 const UserCard = ({ user }) => {
-  console.log("user", user);
+  // console.log("user", user);
 
   const { email, name } = user || {};
 

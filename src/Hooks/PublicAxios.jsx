@@ -8,3 +8,6 @@ const publicAxios = axios.create({
 
 // Export the Axios instance directly
 export default publicAxios;
+
+// https://heritage-back-end.vercel.app
+// http://localhost:3000
