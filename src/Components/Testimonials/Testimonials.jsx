@@ -1,138 +1,132 @@
-/* eslint-disable react/no-unescaped-entities */
-import r1 from "../../assets/r1.jpeg";
-import r2 from "../../assets/r2.jpeg";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import { Rate } from "antd";
+import Slider from "react-slick";
+import { FaStar } from "react-icons/fa";
 
 const Testimonials = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const testimonials = [
+    {
+      id: 1,
+      quote:
+        "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for.",
+      name: "Tony Stark",
+      title: "Marketing manager, XYZ",
+      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      rating: 4,
+    },
+    {
+      id: 2,
+      quote:
+        "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for.",
+      name: "Tony Stark",
+      title: "Marketing manager, XYZ",
+      image: "https://randomuser.me/api/portraits/men/76.jpg",
+      rating: 5,
+    },
+    {
+      id: 1,
+      quote:
+        "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for.",
+      name: "Tony Stark",
+      title: "Marketing manager, XYZ",
+      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      rating: 4,
+    },
+    {
+      id: 2,
+      quote:
+        "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for.",
+      name: "Tony Stark",
+      title: "Marketing manager, XYZ",
+      image: "https://randomuser.me/api/portraits/men/76.jpg",
+      rating: 5,
+    },
+    {
+      id: 1,
+      quote:
+        "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for.",
+      name: "Tony Stark",
+      title: "Marketing manager, XYZ",
+      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      rating: 4,
+    },
+    {
+      id: 2,
+      quote:
+        "The level of security provided by CypherPlay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I was looking for.",
+      name: "Tony Stark",
+      title: "Marketing manager, XYZ",
+      image: "https://randomuser.me/api/portraits/men/76.jpg",
+      rating: 5,
+    },
+  ];
+
   return (
-    <>
-      <div>
-        <Carousel autoPlay >
-          <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 w-11/12 mx-auto">
-            <div className="bg-[#ECF5FF] rounded-md px-8 py-8">
-              <div className=" mt-2">
-                <Rate allowHalf defaultValue={2.5} />
+    <div className=" px-4 md:px-6 lg:px-10 mt-10">
+      <Slider {...settings}>
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.id} className="px-4">
+            <div className="bg-blue-50 py-16 px-8 rounded-lg shadow-md text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <FaStar key={i} className="text-yellow-500" />
+                ))}
+                {[...Array(5 - testimonial.rating)].map((_, i) => (
+                  <FaStar key={i} className="text-gray-300" />
+                ))}
               </div>
-              <p className=" text-sm text-center text-gray-500 mt-8">
-                "The level of security provided by CypherPlay is unmatched. I
-                feel confident using my card for both everyday purchases and
-                travel. It's the peace of mind I was looking for."
-              </p>
-              <div className=" text-center mt-10">
-                <div className=" flex items-center justify-center">
-                  <div className=" w-12 flex items-center justify-center">
-                    <img className=" rounded-full w-12" src={r1} alt="" />
-                  </div>
+              <p className="text-gray-700 text-lg mb-4">{testimonial.quote}</p>
+              <div className="flex flex-col justify-center items-center">
+                <div className=" flex items-center justify-center mb-2">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
                 </div>
-                <h3 className=" font-extrabold mt-2 mb-1">Tony Stark</h3>
-                <p className=" text-sm text-gray-500">Marketing manager, XYZ</p>
-              </div>
-            </div>
-            <div className="bg-[#ECF5FF] rounded-md px-8 py-8">
-              <div className=" mt-2">
-                <Rate allowHalf defaultValue={2.5} />
-              </div>
-              <p className=" text-sm text-center text-gray-500 mt-8">
-                "The level of security provided by CypherPlay is unmatched. I
-                feel confident using my card for both everyday purchases and
-                travel. It's the peace of mind I was looking for."
-              </p>
-              <div className=" text-center mt-10">
-                <div className=" flex items-center justify-center">
-                  <div className=" w-12 flex items-center justify-center">
-                    <img className=" rounded-full w-12" src={r2} alt="" />
-                  </div>
+                <div>
+                  <p className="font-bold text-gray-800">{testimonial.name}</p>
+                  <p className="text-gray-500 text-sm">{testimonial.title}</p>
                 </div>
-                <h3 className=" font-extrabold mt-2 mb-1">Tony Stark</h3>
-                <p className=" text-sm text-gray-500">Marketing manager, XYZ</p>
               </div>
             </div>
           </div>
-          <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 w-11/12 mx-auto">
-            <div className="bg-[#ECF5FF] rounded-md px-8 py-8">
-              <div className=" mt-2">
-                <Rate allowHalf defaultValue={2.5} />
-              </div>
-              <p className=" text-sm text-center text-gray-500 mt-8">
-                "The level of security provided by CypherPlay is unmatched. I
-                feel confident using my card for both everyday purchases and
-                travel. It's the peace of mind I was looking for."
-              </p>
-              <div className=" text-center mt-10">
-                <div className=" flex items-center justify-center">
-                  <div className=" w-12 flex items-center justify-center">
-                    <img className=" rounded-full w-12" src={r1} alt="" />
-                  </div>
-                </div>
-                <h3 className=" font-extrabold mt-2 mb-1">Tony Stark</h3>
-                <p className=" text-sm text-gray-500">Marketing manager, XYZ</p>
-              </div>
-            </div>
-            <div className="bg-[#ECF5FF] rounded-md px-8 py-8">
-              <div className=" mt-2">
-                <Rate allowHalf defaultValue={2.5} />
-              </div>
-              <p className=" text-sm text-center text-gray-500 mt-8">
-                "The level of security provided by CypherPlay is unmatched. I
-                feel confident using my card for both everyday purchases and
-                travel. It's the peace of mind I was looking for."
-              </p>
-              <div className=" text-center mt-10">
-                <div className=" flex items-center justify-center">
-                  <div className=" w-12 flex items-center justify-center">
-                    <img className=" rounded-full w-12" src={r2} alt="" />
-                  </div>
-                </div>
-                <h3 className=" font-extrabold mt-2 mb-1">Tony Stark</h3>
-                <p className=" text-sm text-gray-500">Marketing manager, XYZ</p>
-              </div>
-            </div>
-          </div>
-          <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 w-11/12 mx-auto">
-            <div className="bg-[#ECF5FF] rounded-md px-8 py-8">
-              <div className=" mt-2">
-                <Rate allowHalf defaultValue={2.5} />
-              </div>
-              <p className=" text-sm text-center text-gray-500 mt-8">
-                "The level of security provided by CypherPlay is unmatched. I
-                feel confident using my card for both everyday purchases and
-                travel. It's the peace of mind I was looking for."
-              </p>
-              <div className=" text-center mt-10">
-                <div className=" flex items-center justify-center">
-                  <div className=" w-12 flex items-center justify-center">
-                    <img className=" rounded-full w-12" src={r1} alt="" />
-                  </div>
-                </div>
-                <h3 className=" font-extrabold mt-2 mb-1">Tony Stark</h3>
-                <p className=" text-sm text-gray-500">Marketing manager, XYZ</p>
-              </div>
-            </div>
-            <div className="bg-[#ECF5FF] rounded-md px-8 py-8">
-              <div className=" mt-2">
-                <Rate allowHalf defaultValue={2.5} />
-              </div>
-              <p className=" text-sm text-center text-gray-500 mt-8">
-                "The level of security provided by CypherPlay is unmatched. I
-                feel confident using my card for both everyday purchases and
-                travel. It's the peace of mind I was looking for."
-              </p>
-              <div className=" text-center mt-10">
-                <div className=" flex items-center justify-center">
-                  <div className=" w-12 flex items-center justify-center">
-                    <img className=" rounded-full w-12" src={r2} alt="" />
-                  </div>
-                </div>
-                <h3 className=" font-extrabold mt-2 mb-1">Tony Stark</h3>
-                <p className=" text-sm text-gray-500">Marketing manager, XYZ</p>
-              </div>
-            </div>
-          </div>
-        </Carousel>
-      </div>
-    </>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
