@@ -5,14 +5,11 @@ const Error = () => {
   return (
     <>
       <div className="relative h-screen w-full">
-        {/* Background Image */}
         <img
           className="absolute top-0 left-0 h-full w-full object-cover z-0"
           src={logo}
           alt="Error Background"
         />
-
-        {/* Text Overlay */}
         <div className="relative flex flex-col text-black items-center justify-center h-full w-full z-10">
           <h2 className="text-4xl font-bold text-center drop-shadow-lg">
             Oops! It looks like <br /> you are lost.
