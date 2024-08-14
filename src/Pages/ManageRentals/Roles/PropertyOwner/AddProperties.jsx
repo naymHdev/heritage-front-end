@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 const AddProperties = () => {
   const [countries, setCountries] = useState([]);
 
-  const [allProperty] = useAllProperty();
+  const [allProperty, refetch] = useAllProperty();
 
   const {
     register,
@@ -71,6 +71,7 @@ const AddProperties = () => {
       console.log("add result", res.data);
       if (res?.data.acknowledged) {
         toast.success("Property Added Success");
+        refetch();
       } else {
         toast.error("Property Added Failed!");
       }
