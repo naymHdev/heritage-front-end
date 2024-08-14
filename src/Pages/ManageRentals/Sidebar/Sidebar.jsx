@@ -11,7 +11,6 @@ const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const { getRole } = useUser();
-  // console.log("role__", getRole?.roles);
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -41,12 +40,6 @@ const Sidebar = () => {
               {getRole?.roles}
             </p>
           </div>
-          {/* <button
-            className="text-gray-600 md:hidden"
-            onClick={handleSidebarToggle}
-          >
-            <HiMenu className="text-2xl" />
-          </button> */}
         </div>
         <div className="p-4">
           <nav className=" mt-3">

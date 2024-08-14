@@ -33,7 +33,7 @@ const UserCard = ({ user, refetch }) => {
           </div>
           <div className=" border-b w-full my-6" />
           <div className=" flex items-center justify-between">
-            <UserEditModal EditOutlined={EditOutlined} name={name} />
+            <UserEditModal EditOutlined={EditOutlined} name={name} roles={roles} />
             <button
               onClick={() => {
                 handleDelete(_id);
