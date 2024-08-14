@@ -57,6 +57,7 @@ const Router = createBrowserRouter([
   {
     path: "/",
     element: <RentalsLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/manageRentals",

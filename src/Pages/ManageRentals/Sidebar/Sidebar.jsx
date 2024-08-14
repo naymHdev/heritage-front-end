@@ -68,7 +68,7 @@ const Sidebar = () => {
                 </a>
               </li>
             </ul>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {getRole?.roles == "admin" && (
                 <>
                   <li>
@@ -82,6 +82,15 @@ const Sidebar = () => {
                   <li>
                     <a
                       href="/manageProperties"
+                      className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
+                    >
+                      <GiSpookyHouse className="mr-2 text-xl" /> Manage
+                      Properties
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/jhdsa"
                       className="flex items-center p-2 text-gray-900 hover:bg-gray-200 rounded-md"
                     >
                       <GiSpookyHouse className="mr-2 text-xl" /> Manage
